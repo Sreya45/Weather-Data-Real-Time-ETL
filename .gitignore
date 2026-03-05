@@ -1,0 +1,5 @@
+venv/
+__pycache__/
+*.pyc
+raw_weather_data.json
+cleaned_weather_data.csv
