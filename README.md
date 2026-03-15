@@ -1,126 +1,102 @@
-# Weather Data Real-Time ETL Pipeline
+# 🌦 Real-Time Weather Intelligence ETL Pipeline
 
-## Project Overview
-This project implements a simple **ETL (Extract, Transform, Load) pipeline** that collects real-time weather data from an external API, processes it, and stores it in a PostgreSQL database.
-
-The goal of this project is to demonstrate core **data engineering concepts** such as:
-- API data ingestion
-- Data transformation
-- Database loading
-- Basic pipeline automation
+A real-time end-to-end Data Engineering project that ingests live weather data, processes it through an ETL pipeline, stores it in PostgreSQL, and visualizes insights using an interactive Streamlit dashboard.
 
 ---
 
-## Architecture
+## 🚀 Project Overview
 
-Weather API  
-↓  
-Python ETL Script  
-↓  
-Data Transformation  
-↓  
-PostgreSQL Database  
+This project simulates a real-world data engineering workflow:
 
----
-
-## Tech Stack
-
-- Python
-- Requests (API calls)
-- PostgreSQL
-- psycopg2 (PostgreSQL connector)
-- Git
-- GitHub
+- Extract real-time weather data from public Weather API  
+- Transform and clean the dataset  
+- Load processed data into PostgreSQL database  
+- Automate pipeline execution using scheduling  
+- Build a real-time analytics dashboard for monitoring weather patterns  
 
 ---
 
-## Project Structure
+## 🏗 Architecture
 
-```
-weather-data-pipeline
-│
-├── weather_etl.py              # Main ETL pipeline script
-├── raw_weather_data.json       # Raw API data
-├── cleaned_weather_data.csv    # Processed data
-├── README.md                   # Project documentation
-└── .gitignore                  # Ignored files
-```
+
+Weather API → Python ETL → PostgreSQL → Streamlit Dashboard
+
 
 ---
 
-## Features
+## 📊 Dashboard Features
 
-- Extracts real-time weather data from **Open-Meteo API**
-- Transforms JSON data into structured format
-- Stores cleaned data into a **PostgreSQL database**
-- Maintains historical weather records
-
----
-
-## How the Pipeline Works
-
-### 1️⃣ Extract
-The pipeline fetches live weather data from the **Open-Meteo Weather API**.
-
-### 2️⃣ Transform
-The JSON response is processed and converted into structured data including:
-- City
-- Temperature
-- Wind speed
-- Wind direction
-- Timestamp
-
-### 3️⃣ Load
-The transformed data is inserted into a **PostgreSQL database table** for storage and analysis.
+- Real-time Weather Condition Monitoring  
+- Intelligent Weather Alert System  
+- Wind Rose Visualization (Wind Density & Direction)  
+- Temperature Trend Analysis  
+- Interactive Monitoring Location Map  
+- Auto-Refreshing Real-Time Dashboard  
+- Premium Glass UI & Animated Cards  
 
 ---
 
-## How to Run the Project
+## 🧠 Technologies Used
 
-### 1. Clone the repository
+- Python  
+- PostgreSQL  
+- Pandas  
+- Streamlit  
+- Plotly  
+- Folium  
+- Scheduling (time-based ETL execution)  
 
-```
+---
+
+## ⚙️ How to Run the Project
+
+### 1️⃣ Clone Repository
+
+
 git clone https://github.com/Sreya45/Weather-Data-Real-Time-ETL.git
-```
 
-### 2. Navigate to the project
-
-```
 cd Weather-Data-Real-Time-ETL
-```
 
-### 3. Install dependencies
 
-```
+### 2️⃣ Create Virtual Environment
+
+
+python -m venv venv
+source venv/bin/activate
+
+
+### 3️⃣ Install Dependencies
+
+
 pip install -r requirements.txt
-```
 
-### 4. Run the ETL pipeline
 
-```
+### 4️⃣ Run ETL Pipeline
+
+
 python weather_etl.py
-```
+
+
+### 5️⃣ Run Dashboard
+
+
+streamlit run dashboard.py
+
 
 ---
 
-## Example Output
+## 📈 Future Enhancements
 
-After running the pipeline, the weather data will be stored in PostgreSQL like this:
-
-| id | city | temperature | windspeed | winddirection | recorded_at |
-|----|------|-------------|-----------|---------------|-------------|
-
----
-
-## Future Improvements
-
-- Add **data visualization dashboard**
-- Automate pipeline scheduling
-- Containerize the pipeline using **Docker**
-- Use **Apache Airflow for orchestration**
+- Weather Forecast Prediction using Machine Learning  
+- Cloud Deployment (AWS / GCP)  
+- Docker Containerization  
+- Real-Time Streaming using Kafka  
+- Multi-City Weather Comparison  
 
 ---
 
-## Author
+## 👩‍💻 Author
 
-Sreya Vijay  
+**Sreya Vijay**
+
+Data Engineer  
